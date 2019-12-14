@@ -29,13 +29,13 @@ def decodeByLetter(hs):
     max = 0
     winner = ""
     winnerChr = ""
-    for b in range(256):
+    for b in range(122):
         c = xor_buffer(a, b)
         if areWords(c) > max:
             max = areWords(c)
             winner = c
             winnerChr = b
-    # print(winner)
+    # print(winner.decode("utf-8"))
     return winner
 
 
